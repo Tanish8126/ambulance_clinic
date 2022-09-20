@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "745788595553",
+    "project_id": "ambulanceclinic-af6c2",
+    "storage_bucket": "ambulanceclinic-af6c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745788595553:android:b938652669ae2d5f72f920",
+        "android_client_info": {
+          "package_name": "com.ambulance.clinic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745788595553-te2q3rhmhamg2bk9ugqojsaqacc0tmp3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ambulance.clinic",
+            "certificate_hash": "2070ff2a0658806124876e0039f00252c350fb3f"
+          }
+        },
+        {
+          "client_id": "745788595553-jp2vm9riu4crp0l8qldsmej77h3une2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-Q0ZbB0rdw1SaSYzMzgWZWTdnfR67DjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745788595553-jp2vm9riu4crp0l8qldsmej77h3une2o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
