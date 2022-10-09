@@ -1,9 +1,13 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 import '../../../utils/default_button2.dart';
 import '../../login_check.dart';
 
 class Body extends StatefulWidget {
+  const Body({super.key});
+
   @override
   _BodyState createState() => _BodyState();
 }
@@ -22,10 +26,10 @@ class _BodyState extends State<Body> {
                 'assets/images/babyvcare.png',
                 width: 200,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
-              Text(
+              const Text(
                 "Welcome to India's First Baby Vaccination app!",
                 style: TextStyle(
                     color: Colors.black,
@@ -33,14 +37,14 @@ class _BodyState extends State<Body> {
                     fontSize: 20),
                 textAlign: TextAlign.center,
               ),
-              Spacer(flex: 3),
+              const Spacer(flex: 3),
               DefaultButton2(
                 text: "Discover more ..",
                 press: () {
                   Navigator.pushNamed(context, LoginCheckScreen.routeName);
                 },
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
         ),

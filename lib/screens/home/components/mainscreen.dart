@@ -5,7 +5,7 @@ import '../../../utils/size_config.dart';
 
 class MainScreenForm extends StatefulWidget {
   static String routeName = "/mainscreenform";
-  MainScreenForm({Key? key}) : super(key: key);
+  const MainScreenForm({Key? key}) : super(key: key);
 
   @override
   State<MainScreenForm> createState() => _MainScreenFormState();
@@ -18,7 +18,7 @@ class _MainScreenFormState extends State<MainScreenForm> {
     return Stack(
       children: [
         Container(
-          padding: EdgeInsets.only(left: 10, right: 10),
+          padding: const EdgeInsets.only(left: 10, right: 10),
           height: 700,
           child: SingleChildScrollView(
             child: Column(
@@ -32,7 +32,7 @@ class _MainScreenFormState extends State<MainScreenForm> {
                     // Navigator.pushNamed(context, AppointmentForm.routeName);
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 DefaultButton(

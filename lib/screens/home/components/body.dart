@@ -7,7 +7,7 @@ import 'banner.dart';
 import 'mainscreen.dart';
 
 class Body extends StatefulWidget {
-  Body({Key? key}) : super(key: key);
+  const Body({Key? key}) : super(key: key);
 
   @override
   State<Body> createState() => _BodyState();
@@ -19,7 +19,7 @@ class _BodyState extends State<Body> {
     SizeConfig().init(context);
     return Scaffold(
         appBar: AppBar(
-            title: Text(
+            title: const Text(
               "Baby V Care",
             ),
             backgroundColor: kbg,
@@ -30,7 +30,7 @@ class _BodyState extends State<Body> {
                   onTap: () {
                     // Navigator.pushNamed(context, NotificationScreen.routeName);
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.notifications_active_sharp,
                     color: kPrimaryLightColor,
                     size: 40,
@@ -40,7 +40,7 @@ class _BodyState extends State<Body> {
             ]),
         body: Padding(
             padding: const EdgeInsets.only(top: 10),
-            child: Column(children: [
+            child: Column(children: const [
               DiscountBanner(),
               Text(
                 "Select The Required Vaccine",

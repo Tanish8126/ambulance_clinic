@@ -6,11 +6,13 @@ import 'splash_screen/components/body.dart';
 
 class SplashScreen extends StatelessWidget {
   static String routeName = "/splash";
+
+  const SplashScreen({super.key});
   @override
   Widget build(BuildContext context) {
     // You have to call it on your starting screen
     SizeConfig().init(context);
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: kbg,
       body: Body(),
     );

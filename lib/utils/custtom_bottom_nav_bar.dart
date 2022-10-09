@@ -14,12 +14,12 @@ class CustomBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color inActiveIconColor = kPrimaryLightColor;
+    const Color inActiveIconColor = kPrimaryLightColor;
     return Container(
-      padding: EdgeInsets.only(bottom: 10, top: 0),
+      padding: const EdgeInsets.only(bottom: 10, top: 0),
       alignment: Alignment.center,
       height: 60,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: kbg,
       ),
       child: Row(

@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
@@ -8,7 +10,7 @@ import 'home/homescreen.dart';
 class OtpScreen extends StatefulWidget {
   static String routeName = "/otp";
   final String phone;
-  OtpScreen(this.phone);
+  const OtpScreen(this.phone, {super.key});
   @override
   _OtpScreenState createState() => _OtpScreenState();
 }
@@ -21,7 +23,7 @@ class _OtpScreenState extends State<OtpScreen> {
   final defaultPinTheme = PinTheme(
     width: 56,
     height: 56,
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
         fontSize: 20,
         color: Color.fromRGBO(30, 60, 87, 1),
         fontWeight: FontWeight.w600),
@@ -35,17 +37,18 @@ class _OtpScreenState extends State<OtpScreen> {
     return Scaffold(
       key: _scaffoldkey,
       appBar: AppBar(
-        title: Text('OTP Verification'),
+        title: const Text('OTP Verification'),
         backgroundColor: kbg,
       ),
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 40),
+            margin: const EdgeInsets.only(top: 40),
             child: Center(
               child: Text(
                 'We have sent your code on\n +91-${widget.phone}',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -66,7 +69,8 @@ class _OtpScreenState extends State<OtpScreen> {
                     if (value.user != null) {
                       Navigator.pushAndRemoveUntil(
                           context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                          MaterialPageRoute(
+                              builder: (context) => const HomeScreen()),
                           (route) => false);
                     }
                   });
@@ -92,14 +96,12 @@ class _OtpScreenState extends State<OtpScreen> {
             if (value.user != null) {
               Navigator.pushAndRemoveUntil(
                   context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
                   (route) => false);
             }
           });
         },
-        verificationFailed: (FirebaseAuthException e) {
-          print(e.message);
-        },
+        verificationFailed: (FirebaseAuthException e) {},
         codeSent: (String? verficationID, int? resendToken) {
           setState(() {
             _verificationCode = verficationID;
@@ -110,12 +112,11 @@ class _OtpScreenState extends State<OtpScreen> {
             _verificationCode = verificationID;
           });
         },
-        timeout: Duration(seconds: 120));
+        timeout: const Duration(seconds: 120));
   }
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _verifyPhone();
   }

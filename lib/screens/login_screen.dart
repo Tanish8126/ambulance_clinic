@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 import '../../utils/size_config.dart';
@@ -7,18 +9,20 @@ import 'otp_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static String routeName = "/loginscreen";
+
+  const LoginScreen({super.key});
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: const Text('Login'),
         backgroundColor: kbg,
       ),
       body: Padding(
@@ -27,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             Column(children: [
               Container(
-                margin: EdgeInsets.only(top: 20),
+                margin: const EdgeInsets.only(top: 20),
                 child: Center(
                   child: Text(
                     "Welcome Back\nSign in with your Mobile Number",
@@ -41,9 +45,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 40, right: 10, left: 10),
+                margin: const EdgeInsets.only(top: 40, right: 10, left: 10),
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: "Mobile Number",
                     labelStyle: TextStyle(fontSize: 20, color: Colors.black),
                     hintText: "Enter your Mobile Number",
@@ -65,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               )
             ]),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             DefaultButton(
